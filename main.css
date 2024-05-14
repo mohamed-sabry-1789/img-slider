@@ -10,7 +10,9 @@
     height: 500px;
     position: relative;
 
+
 }
+
 
 
 .slider-container img {
@@ -89,4 +91,18 @@
 .indectors ul li.active {
     background-color: #009688;
     color: #fff;
+}
+
+@media(max-width:600px) {
+    html {
+        width: 800px;
+    }
+
+    .sliders-controls {
+        justify-content: space-evenly;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
 }

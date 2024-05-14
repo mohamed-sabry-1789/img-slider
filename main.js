@@ -125,7 +125,6 @@ imgsArry[currentSlid - 1].classList.add("active")
 
 currentSlidNums(slideNum, currentSlid)
 
-
 function currentSlidNums(slid, num) {
     slid.textContent = `#${num}`
 }
@@ -164,15 +163,15 @@ function nextSlid() {
         checkIfPrevAndNext(currentSlid)
         movebulet()
     }
+
 }
 
 
 function prevSlid() {
-
     if (currentSlid > 1) {
         removeAllActiveClass(imgsArry)
         currentSlid--
-        imgsArry[currentSlid].classList.add("active")
+        imgsArry[currentSlid - 1].classList.add("active")
         currentSlidNums(slideNum, currentSlid)
         checkIfPrevAndNext(currentSlid)
         movebulet()
@@ -182,6 +181,7 @@ function prevSlid() {
 next.addEventListener("click", nextSlid)
 
 prev.addEventListener("click", prevSlid)
+
 function removeAllActiveClass(els) {
     els.forEach((el) => {
         if (el.classList.contains("active")) {
